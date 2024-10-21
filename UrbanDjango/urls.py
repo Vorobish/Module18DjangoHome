@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from task2.views import func, Class
-from task3.views import magazine, basket, home
+# from task3.views import magazine, basket, home
+from task4.views import games, cart, platform, menu
 # from django.views.generic import TemplateView
 
 urlpatterns = [
@@ -25,7 +26,8 @@ urlpatterns = [
     path('func/', func),
     # path('class/', TemplateView.as_view(template_name='second_task/class_template.html')),
     path('class/', Class.as_view()),
-    path('', home),
-    path('magazine/', magazine),
-    path('basket/', basket)
+    path('platform/', platform),
+    path('platform/games/', games),
+    path('platform/cart/', cart),
+    path('platform/menu/', menu),
 ]
